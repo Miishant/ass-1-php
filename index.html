@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pizza Order Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pizza Order Form</h1>
+        <form id="pizzaForm">
+            <label for="pizzaSize">Select Pizza Size:</label>
+            <select id="pizzaSize" name="pizzaSize" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <label for="toppings">Select Toppings (Maximum 3):</label>
+            <input type="checkbox" name="topping" value="pepperoni"> Pepperoni
+            <input type="checkbox" name="topping" value="mushrooms"> Mushrooms
+            <input type="checkbox" name="topping" value="sausage"> Sausage
+            <input type="checkbox" name="topping" value="onions"> Onions
+            <input type="checkbox" name="topping" value="bellpeppers"> Bell Peppers
+
+            <label for="delivery">Delivery Address:</label>
+            <input type="text" id="delivery" name="deliveryAddress" required>
+
+            <input type="submit" value="Place Order">
+        </form>
+
+        <div id="orderConfirmation" class="hidden">
+            <h2>Order Confirmation</h2>
+            <p><strong>Size:</strong> <span id="confirmationSize"></span></p>
+            <p><strong>Toppings:</strong> <span id="confirmationToppings"></span></p>
+            <p><strong>Delivery Address:</strong> <span id="confirmationAddress"></span></p>
+        </div>
+    </div>
+</body>
+
+</html>
